@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="form-group mb-3">
                 <label for="body" class="form-label"><h4>About</h4></label>
-                <textarea class="form-control fs-5 @error('description') is-invalid @enderror" name="description" id="body" cols="30" rows="10">{{$about->description}}</textarea>
+                <textarea maxlength="255" class="form-control fs-5 @error('description') is-invalid @enderror" name="description" id="body" cols="30" rows="10">{{$about->description}}</textarea>
                 @error('description')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -19,7 +19,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="visi" class="form-label"><h4>Visi</h4></label>
-                        <textarea class="form-control fs-5 @error('visi') is-invalid @enderror" name="visi" id="visi" cols="30" rows="5">{{$about->visi}}</textarea>
+                        <textarea maxlength="100" class="form-control fs-5 @error('visi') is-invalid @enderror" name="visi" id="visi" cols="30" rows="5">{{$about->visi}}</textarea>
                         @error('visi')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -28,7 +28,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="misi" class="form-label"><h4>Misi</h4></label>
-                        <textarea class="form-control fs-5 @error('misi') is-invalid @enderror" name="misi" id="misi" cols="30" rows="5">{{$about->misi}}</textarea>
+                        <textarea maxlength="100" class="form-control fs-5 @error('misi') is-invalid @enderror" name="misi" id="misi" cols="30" rows="5">{{$about->misi}}</textarea>
                         @error('misi')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -37,7 +37,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="nilai" class="form-label"><h4>nilai</h4></label>
-                        <textarea class="form-control fs-5 @error('nilai') is-invalid @enderror" name="nilai" id="nilai" cols="30" rows="5">{{$about->nilai}}</textarea>
+                        <textarea maxlength="100" class="form-control fs-5 @error('nilai') is-invalid @enderror" name="nilai" id="nilai" cols="30" rows="5">{{$about->nilai}}</textarea>
                         @error('nilai')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

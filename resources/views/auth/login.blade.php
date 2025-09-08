@@ -5,7 +5,7 @@
     <div class="p-lg-5 p-4">
         <div>
             <h5 class="text-primary">Login</h5>
-            <p class="text-muted">Login ke SAKTI.Online</p>
+            <p class="text-muted">Login ke DASHBOARD</p>
         </div>
 
         <div class="mt-4">
@@ -13,14 +13,11 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">{{ __('E-Mail Address or Username') }}</label>
-                    <input type="text" class="form-control" id="email" placeholder="{{ __('E-Mail Address or Username') }}" name="email" value="{{ old('email') }}" required autofocus>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
                 </div>
                 
                 <div class="mb-3">
-                    <div class="float-end">
-                        <a href="auth-pass-reset-cover.html" class="text-muted">Forgot password?</a>
-                    </div>
                     <label class="form-label" for="password-input">Password</label>
                     <div class="position-relative auth-pass-inputgroup mb-3">
                         <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input" name="password" required value="{{ old('password') }}">

@@ -61,7 +61,7 @@
                                                 <div id="qoutescarouselIndicators" class="carousel slide" data-bs-ride="carousel">
                                                     <div class="text-center text-white pb-5">
                                                         <div class="">
-                                                            <p class="fs-15 fst-italic">" SAKTI merupakan sistem informasi akuntansi  dengan teknologi Internet "</p>
+                                                            <p class="fs-15 fst-italic">" SMK NEGERI 4 BOGOR MENCERDASKAN KEHIDUPAN BANGSA!! "</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -96,7 +96,7 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0">&copy;
-                                <script>document.write(new Date().getFullYear())</script> Sakti. Crafted with <i class="mdi mdi-heart text-danger"></i>
+                                <script>document.write(new Date().getFullYear())</script> Nabila. Crafted with <i class="mdi mdi-heart text-danger"></i>
                             </p>
                         </div>
                     </div>

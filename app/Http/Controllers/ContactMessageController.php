@@ -10,7 +10,7 @@ class ContactMessageController extends Controller
     public function index()
     {
         $messages = ContactMessage::latest()->get();
-        return view('contact_messages.index', compact('messages'));
+        return view('messages.index', compact('messages'));
     }
 
     public function store(Request $request)
@@ -27,15 +27,16 @@ class ContactMessageController extends Controller
         return back()->with('success', 'Message sent successfully.');
     }
 
-    public function show(ContactMessage $contactMessage)
+    public function show(ContactMessage $message)
     {
-        return view('contact_messages.show', compact('contactMessage'));
+        // return view('messages.show', compact('message'));
+        return ;
     }
 
-    public function destroy(ContactMessage $contactMessage)
+    public function destroy(ContactMessage $message)
     {
-        $contactMessage->delete();
+        $message->delete();
 
-        return redirect()->route('contact-messages.index')->with('success', 'Message deleted successfully.');
+        return redirect()->route('messages.index')->with('success', 'Message deleted successfully.');
     }
 }

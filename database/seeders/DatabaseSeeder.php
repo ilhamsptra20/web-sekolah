@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\About;
 use App\Models\AboutCard;
 use App\Models\User;
+use App\Models\StudyProgram;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -29,5 +30,33 @@ class DatabaseSeeder extends Seeder
             'misi' => 'Menyediakan kurikulum inovatif dan fasilitas terbaik untuk memaksimalkan potensi siswa.',
             'nilai' => 'Integritas, inovasi, kolaborasi, dan kepedulian sosial.',
         ]);
+
+        $studyPrograms = [
+            [
+                "title"=> "Teknik Kendaraan Ringan Otomotif (TKR)",
+                "description"=> "Fokus pada perawatan dan perbaikan kendaraan bermotor. Jurusan ini memiliki kerja sama dengan PT Honda untuk kelas industri."
+            ],
+            [
+                "title"=> "Pengembangan Perangkat Lunak dan Gim (PPLG)",
+                "description"=> "Berfokus pada pengembangan perangkat lunak dan aplikasi."
+            ],
+            [
+                "title"=> "Teknik Jaringan Komputer dan Telekomunikasi (TJKT)",
+                "description"=> "Menangani instalasi dan pemeliharaan jaringan komputer. Jurusan ini diketahui memiliki program Samsung Teknik Institute (STI) untuk pelatihan teknisi dan promotor."
+            ],
+            [
+                "title"=> "Teknik Pengelasan dan Fabrikasi Logam (TP)",
+                "description"=> "Mempelajari proses pembuatan, perakitan, dan pengelasan komponen logam. Jurusan ini juga menjalin kerja sama dengan industri besar."
+            ]
+        ];
+
+        foreach($studyPrograms as $studyProgram) {
+            StudyProgram::create([
+                "title" => $studyProgram['title'],
+                "description" => $studyProgram['description'],
+            ]);
+        }
+
+        
     }
 }

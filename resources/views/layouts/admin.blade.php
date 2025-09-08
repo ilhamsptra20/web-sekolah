@@ -4,9 +4,9 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Dashboard | Yayasan Insan Mandiri</title>
+    <title>Dashboard | SMK NEGERI 4 BOGOR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Yayasan Insan Mandiri" name="description" />
+    <meta content="SMK NEGERI 4 BOGOR" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ @asset("favicon.ico") }}"/>
@@ -46,10 +46,10 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ @asset("assets/logo/logo-insan-mandiri.png") }}" alt="" height="22">
+                                    <img src="{{ @asset("assets/logo/logo_smkn_4.png") }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <h2 class="p-2 text-white fw-bold">Yayasan Insan Mandiri</h2>
+                                    <h2 class="p-2 text-white fw-bold">SMK NEGERI 4 BOGOR</h2>
                                 </span>
                             </a>
 
@@ -58,11 +58,10 @@
                                     <img src="{{ @asset("assets/images/logo-sm.png") }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <h2 class="p-2 text-white fw-bold">Yayasan Insan Mandiri</h2>
+                                    <h2 class="p-2 text-white fw-bold">SMK NEGERI 4 BOGOR</h2>
                                 </span>
                             </a>
                         </div>
-
                         <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none" id="topnav-hamburger-icon">
                             <span class="hamburger-icon">
                                 <span></span>
@@ -78,16 +77,14 @@
                                 <span class="d-flex align-items-center">
                                     <img class="rounded-circle header-profile-user" src="{{ @asset("assets/images/users/avatar-1.jpg") }}" alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{-- Auth::user()->name --}}</span>
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{ Auth::user()->name }}</span>
                                     </span>
                                 </span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <h6 class="dropdown-header">Welcome !</h6>
-                                <a class="dropdown-item" href="#{{-- route('profile.index') --}}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                                <h6 class="dropdown-header">Welcome {{Auth::user()->name}}</h6>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#{{-- route('settings.index') --}}"><i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Settings</span></a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
@@ -110,7 +107,7 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ @asset("assets/logo/logo-insan-mandiri.png") }}" alt="" height="22">
+                        <img src="{{ @asset("assets/logo/logo_smkn_4.png") }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
                         <img src="{{ @asset("assets/images/logo-dark.png") }}" alt="" height="17">
@@ -119,10 +116,10 @@
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ @asset("assets/logo/logo-insan-mandiri.png") }}" alt="" height="32">
+                        <img src="{{ @asset("assets/logo/logo_smkn_4.png") }}" alt="" height="32">
                     </span>
                     <span class="logo-lg">
-                        <h2 class="p-2 text-white fw-bold">Yayasan Insan Mandiri</h2>
+                        <h2 class="p-2 text-white fw-bold">SMK NEGERI 4 BOGOR</h2>
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -142,7 +139,7 @@
                         <li class="menu-item">
                             <a class="nav-link {{ Nav::isRoute('home') }}" href="{{ route('home') }}">
                                 <i class="mdi mdi-speedometer"></i>
-                                <span>{{ __('Dashboard') }}</span>
+                                <span>Dashboard</span>
                             </a>
                         </li>
 
@@ -188,13 +185,6 @@
                             <a class="nav-link {{ Nav::isResource('messages') }}" href="{{ route('messages.index') }}">
                                 <i class="mdi mdi-email-outline"></i>
                                 <span>Messages</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-item">
-                            <a class="nav-link {{ Nav::isResource('settings') }}" href="{{ route('settings.index') }}">
-                                <i class="mdi mdi-cog-outline"></i>
-                                <span>Settings</span>
                             </a>
                         </li>
                     </ul>

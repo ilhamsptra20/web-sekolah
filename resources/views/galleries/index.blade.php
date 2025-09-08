@@ -18,22 +18,22 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse ($galleries as $index => $carousel)
+                @forelse ($galleries as $index => $gallery)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $carousel->caption }}</td>
+                        <td>{{ $gallery->caption }}</td>
                         <td>
-                            @if ($carousel->image)
-                                <img src="{{ asset('storage/' . $carousel->image) }}" 
-                                     alt="{{ $carousel->title }}" 
+                            @if ($gallery->image)
+                                <img src="{{ asset('storage/' . $gallery->image) }}" 
+                                     alt="{{ $gallery->title }}" 
                                      style="height: 50px; width: auto;" class="rounded">
                             @else
                                 -
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('galleries.edit', $carousel->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                            <form action="{{ route('galleries.destroy', $carousel->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
+                            <a href="{{ route('galleries.edit', $gallery->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                            <form action="{{ route('galleries.destroy', $gallery->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>

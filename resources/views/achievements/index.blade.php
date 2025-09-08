@@ -37,7 +37,7 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('achievements.edit', $achievement->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('achievements.edit', $achievement->id) }}" class="btn btn-sm btn-primary">Edit</a>
                             <form action="{{ route('achievements.destroy', $achievement->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
                                 @csrf
                                 @method('DELETE')

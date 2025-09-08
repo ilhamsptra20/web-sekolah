@@ -25,7 +25,7 @@
                         <td>{{ $achievement->title }}</td>
                         <td>{{ $achievement->description }}</td>
                         <td>
-                            <a href="{{ route('study-programs.edit', $achievement->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('study-programs.edit', $achievement->id) }}" class="btn btn-sm btn-primary">Edit</a>
                             <form action="{{ route('study-programs.destroy', $achievement->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
                                 @csrf
                                 @method('DELETE')

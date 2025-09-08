@@ -19,6 +19,11 @@ class CarouselController extends Controller
         return view('carousels.create');
     }
 
+    public function show ()
+    {
+        return;
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -66,6 +71,17 @@ class CarouselController extends Controller
         $carousel->update($data);
 
         return redirect()->route('carousels.index')->with('success', 'Carousel updated successfully.');
+    }
+
+    public function activate(Carousel $carousel)
+    {
+        $carousel->status = !$carousel->status;
+        $carousel->save();
+
+        if($carousel->status) {
+            return redirect()->route('carousels.index')->with('success', 'Carousel activate successfully.');
+        } 
+        return redirect()->route('carousels.index')->with('success', 'Carousel deactivate successfully.');
     }
 
     public function destroy(Carousel $carousel)
