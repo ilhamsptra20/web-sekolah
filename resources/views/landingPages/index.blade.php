@@ -223,8 +223,14 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6669865181766!2d106.79092497401777!3d-6.561917764121404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5e31c7136d3%3A0x62955745145b2520!2sSMK%20Negeri%204%20Bogor!5e0!3m2!1sid!2sid!4v1709778000000!5m2!1sid!2sid"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.049839612663!2d106.82211360980257!3d-6.640733393326073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c8b16ee07ef5%3A0x14ab253dd267de49!2sSMKN%204%20Bogor!5e0!3m2!1sen!2sid!4v1757402313613!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
