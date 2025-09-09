@@ -32,7 +32,7 @@ class StudyProgramController extends Controller
 
     public function edit(StudyProgram $studyProgram)
     {
-        return view('studyPrograms.edit', compact('stud$studyProgram'));
+        return view('studyPrograms.edit', compact('studyProgram'));
     }
 
     public function update(Request $request, StudyProgram $studyProgram)
