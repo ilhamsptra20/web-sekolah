@@ -75,7 +75,15 @@ class CarouselController extends Controller
 
     public function activate(Carousel $carousel)
     {
-        $carousel->status = !$carousel->status;
+        if (!$carousel->status) {
+            $lastActiveOrder = Carousel::max('order') ?? 0;
+            $carousel->order = $lastActiveOrder + 1;
+            $carousel->status = true;
+        } else {
+            $carousel->order = 0;
+            $carousel->status = false;
+        }
+
         $carousel->save();
 
         if($carousel->status) {

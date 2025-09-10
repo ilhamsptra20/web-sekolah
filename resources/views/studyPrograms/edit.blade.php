@@ -6,7 +6,7 @@
 <div class="card">
     <div class="card-header">Edit Study Programs</div>
     <div class="card-body">
-        <form action="{{ route('study-programs.update', $studyprograms->id) }}" method="POST">
+        <form action="{{ route('study-programs.update', $studyProgram->id) }}" method="POST">
             @csrf
             @method('PUT')
 

@@ -15,6 +15,7 @@
                     <th>#</th>
                     <th>Title</th>
                     <th>Image</th>
+                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -33,11 +34,18 @@
                             @endif
                         </td>
                         <td>
+                            @if ($carousel->status)
+                                <span class="badge bg-success">Active</span>
+                            @else
+                                <span class="badge bg-warning">Inactive</span>
+                            @endif
+                        </td>
+                        <td>
                             <a href="{{ route('carousels.edit', $carousel->id) }}" class="btn btn-sm btn-primary">Edit</a>
                             <form action="{{ route('carousels.activate', $carousel->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
                                 @csrf
                                 @method('PUT')
-                                <button type="submit" class="btn btn-sm @if ($carousel->status) btn-success @else btn-warning @endif"> @if ($carousel->status) Activate @else Deactivate @endif</button>
+                                <button type="submit" class="btn btn-sm @if ($carousel->status) btn-warning @else btn-success @endif"> @if ($carousel->status) Dactivate @else Activate @endif</button>
                             </form>
                             <form action="{{ route('carousels.destroy', $carousel->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?');">
                                 @csrf
