@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Sign In | Yayasan Insan Mandiri</title>
+    <title>Log In | SMK NEGERI 4 BOGOR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Yayasan Insan Mandiri" name="description" />
     <meta content="Themesbrand" name="author" />
